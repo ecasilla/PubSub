@@ -1,6 +1,5 @@
 PubSub = {handlers:{}}
 
-
 PubSub.on = function(eventType, handler) { 
   if (!(eventType in this.handlers)) {
     this.handlers[eventType] = [];
@@ -8,7 +7,6 @@ PubSub.on = function(eventType, handler) {
   this.handlers[eventType].push(handler);
   return this; 
 }
-
 
 PubSub.emit = function(eventType) {
   var handlerArgs = Array.prototype.slice.call(arguments, 1); 
